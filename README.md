@@ -1,6 +1,6 @@
 # Max's Python project improvement checklist!
 
-This is a list of guidelines that can be referred to when starting to work on a Python project that hasn't been maintained in a while.
+This is a list of guidelines that can be referred to when starting to work on a Python project that needs some attention. The main motivation for this list was my work on the [Vonage Python SDK](https://github.com/Vonage/vonage-python-sdk).
 
 ## Understanding the project
 * Look up documentation on the project and how it works.
@@ -11,7 +11,7 @@ This is a list of guidelines that can be referred to when starting to work on a 
 * Install the dependencies - check they're still compatible with current Python versions.
 * Run the tests! (Run them on a Python version the project definitely supports, then on the most recent version.)
 * Check what (if any) validation is done on inputs.
-* Use Snakeviz to understand and visualise the call stack.
+* Use [Snakeviz](https://jiffyclub.github.io/snakeviz/) to understand and visualise the call stack.
 
 ## Making changes
 * Trust is key - make sure your users know they can trust your releases.
@@ -25,7 +25,7 @@ This is a list of guidelines that can be referred to when starting to work on a 
 ## Enhancing the project and looking forward
 * Add custom errors and give specific messages when they're thrown in your code.
 * Consider making code async if the project spends a lot of time waiting for IO-based operations, but only if it will really help your users.
-* Consider validating input with Pydantic.
+* Consider validating input with [Pydantic](https://pydantic-docs.helpmanual.io/).
 
 ## Handing over a codebase
 2 weeks before handover:

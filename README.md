@@ -11,6 +11,9 @@ This is a list of guidelines that can be referred to when starting to work on a 
 * Install the dependencies - check they're still compatible with current Python versions.
 * Run the tests! (Run them on a Python version the project definitely supports, then on the most recent version.)
 * Check what (if any) validation is done on inputs.
+* Use static and behavioural analysis tooling to get in-depth code metrics.
+* Use a code coverage tool (e.g. [coverage](https://coverage.readthedocs.io/en/6.5.0/)) to work out what parts of the code have been tested.
+* Use mutation testing (e.g. [mutmut](https://mutmut.readthedocs.io/en/latest/)) to understand how reliable the tests are likely to be!
 * Use [Snakeviz](https://jiffyclub.github.io/snakeviz/) to understand and visualise the call stack.
 
 ## Making changes
@@ -26,6 +29,7 @@ This is a list of guidelines that can be referred to when starting to work on a 
 * Add custom errors and give specific messages when they're thrown in your code.
 * Consider making code async if the project spends a lot of time waiting for IO-based operations, but only if it will really help your users.
 * Consider validating input with [Pydantic](https://pydantic-docs.helpmanual.io/).
+* Use metrics like mutation score to keep your test quality high.
 
 ## Handing over a codebase
 2 weeks before handover:
@@ -33,7 +37,7 @@ This is a list of guidelines that can be referred to when starting to work on a 
 * Finish the existing features.
 * Merge the PRs. 
 * Close the feature branches.
-* Document the state of the code
+* Document the state of the code.
 
 ## Trust is key
 The code's users must be able to trust your releases, and your team must be able to trust you to deliver new features whilst fixing up the code.
